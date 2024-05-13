@@ -1,6 +1,6 @@
 main:
   - title: "CompGS: Efficient 3D Scene Representation via Compressed Gaussian Splatting"
-    authors: <strong>Xiangrui Liu†</strong>, Xinju Wu†, Pingping Zhang, Shiqi Wang*, Zhu Li, Sam Kwong (†Equal contribution *Corresponding authors)
+    authors: <strong>Xiangrui Liu†</strong>, Xinju Wu†, Pingping Zhang, Shiqi Wang*, Zhu Li, Sam Kwong (†Equal contribution, *Corresponding author)
     conference_short: arXiv
     conference: arXiv, 2024.
     pdf: https://arxiv.org/abs/2404.09458
@@ -19,7 +19,7 @@ main:
     image: ./assets/img/bcm_net.png
 
   - title: "Deep Stereo Image Compression via Bi-Directional Coding"
-    authors: Jianjun Lei, <strong>Xiangrui Liu</strong>, Bo Peng*, Dengchao Jin, Wanqing Li, Jingxiao Gu (*Corresponding authors)
+    authors: Jianjun Lei, <strong>Xiangrui Liu</strong>, Bo Peng*, Dengchao Jin, Wanqing Li, Jingxiao Gu (*Corresponding author)
     conference_short: CVPR
     conference: IEEE/CVF Conference on Computer Vision and Pattern Recognition <strong>(CVPR)</strong>, 2022.
     pdf: https://openaccess.thecvf.com/content/CVPR2022/html/Lei_Deep_Stereo_Image_Compression_via_Bi-Directional_Coding_CVPR_2022_paper.html
@@ -27,7 +27,7 @@ main:
     image: ./assets/img/bcsic_net.png
 
   - title: "Disparity-Aware Reference Frame Generation Network for Multiview Video Coding"
-    authors: Jianjun Lei, Zongqian Zhang, Zhaoqing Pan*, Dong Liu,  Ying Chen, Nam Ling (*Corresponding authors)
+    authors: Jianjun Lei, Zongqian Zhang, Zhaoqing Pan*, Dong Liu,  Ying Chen, Nam Ling (*Corresponding author)
     conference_short: TIP
     conference: IEEE Transactions on Image Processing <strong>(TIP)</strong>, 2022.
     pdf: https://ieeexplore.ieee.org/abstract/document/9802838/authors#full-text-header
@@ -35,7 +35,7 @@ main:
     image: ./assets/img/dag_net.jpg
 
   - title: "Texture-Guided End-to-End Depth Map Compression"
-    authors: Bo Peng, Yuying Jing, Dengchao Jin, <strong>Xiangrui Liu</strong>, Zhaoqing Pan, Jianjun Lei* (*Corresponding authors)
+    authors: Bo Peng, Yuying Jing, Dengchao Jin, <strong>Xiangrui Liu</strong>, Zhaoqing Pan, Jianjun Lei* (*Corresponding author)
     conference_short: ICIP
     conference: IEEE International Conference on Image Processing <strong>(ICIP)</strong>, 2022.
     pdf: https://ieeexplore.ieee.org/abstract/document/9897569
