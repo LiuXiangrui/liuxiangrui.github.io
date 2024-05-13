@@ -1,0 +1,7 @@
+@inproceedings{lei2022deep,
+  title={Deep stereo image compression via bi-directional coding},
+  author={Lei, Jianjun and Liu, Xiangrui and Peng, Bo and Jin, Dengchao and Li, Wanqing and Gu, Jingxiao},
+  booktitle={Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition},
+  pages={19669--19678},
+  year={2022}
+}
