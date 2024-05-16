@@ -1,0 +1,7 @@
+@article{liu2024bilateral,
+  title={Bilateral Context Modeling for Residual Coding in Lossless 3D Medical Image Compression},
+  author={Liu, Xiangrui and Wang, Meng and Wang, Shiqi and Kwong, Sam},
+  journal={IEEE Transactions on Image Processing},
+  year={2024},
+  publisher={IEEE}
+}

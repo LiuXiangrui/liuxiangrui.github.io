@@ -232,8 +232,8 @@ a:hover small {
   color:#777;
 }
 
-.wrapper {
-  width:960px;
+div.wrapper {
+  width:90%;
   margin:0 auto;
 }
 
@@ -283,15 +283,13 @@ img {
 }
 
 header {
-  width:232px;
+  width: 15%;
   float:left;
   position:fixed;
   -webkit-font-smoothing:subpixel-antialiased;
   padding-top:4.0em;
   text-align:center
 }
-
-
 
 header ul {
   list-style:none;
@@ -353,7 +351,7 @@ header ul a strong {
 }
 
 section {
-  width:650px;
+  width: 75%;
   float:right;
   padding-top:4.0em;
   padding-bottom:50px;
@@ -389,7 +387,7 @@ footer {
     width:auto;
     margin:0;
   }
-
+  
 
   header, section, footer {
     float:none;

@@ -3,41 +3,42 @@ main:
     authors: <strong>Xiangrui Liu†</strong>, Xinju Wu†, Pingping Zhang, Shiqi Wang*, Zhu Li, Sam Kwong (†Equal contribution, *Corresponding author)
     conference_short: arXiv
     conference: arXiv, 2024.
-    pdf: https://arxiv.org/abs/2404.09458
+    url: https://arxiv.org/abs/2404.09458
     code: https://github.com/LiuXiangrui/CompGS
-    bibtex: ./assets/files/bib_comp_gs.txt
-    image: ./assets/img/comp_gs.jpg
+    bibtex: ./assets/files/publications/comp_gs/bib_comp_gs.txt
+    image: ./assets/files/publications/comp_gs/comp_gs.jpg
 
   - title: "Bilateral Context Modeling for Residual Coding in Lossless 3D Medical Image Compression"
     authors: <strong>Xiangrui Liu</strong>, Meng Wang, Shiqi Wang*, Sam Kwong* (*Corresponding authors)
     conference_short: TIP
     conference: IEEE Transactions on Image Processing <strong>(TIP)</strong>, 2024.
-    pdf: https://ieeexplore.ieee.org/abstract/document/10478821
+    url: https://ieeexplore.ieee.org/abstract/document/10478821
     code: https://github.com/LiuXiangrui/BCM-Net
     # page: https://class-il.mpi-inf.mpg.de/mnemonics/
-    bibtex: ./assets/files/bib_bcm_net.txt
-    image: ./assets/img/bcm_net.png
+    bibtex: ./assets/files/publications/bcm_net/bib_bcm_net.txt
+    image: ./assets/files/publications/bcm_net/bcm_net.png
 
   - title: "Deep Stereo Image Compression via Bi-Directional Coding"
     authors: Jianjun Lei, <strong>Xiangrui Liu</strong>, Bo Peng*, Dengchao Jin, Wanqing Li, Jingxiao Gu (*Corresponding author)
     conference_short: CVPR
     conference: IEEE/CVF Conference on Computer Vision and Pattern Recognition <strong>(CVPR)</strong>, 2022.
-    pdf: https://openaccess.thecvf.com/content/CVPR2022/html/Lei_Deep_Stereo_Image_Compression_via_Bi-Directional_Coding_CVPR_2022_paper.html
-    bibtex: ./assets/files/bib_bcsic_net.txt
-    image: ./assets/img/bcsic_net.png
+    url: https://openaccess.thecvf.com/content/CVPR2022/html/Lei_Deep_Stereo_Image_Compression_via_Bi-Directional_Coding_CVPR_2022_paper.html
+    bibtex: ./assets/files/publications/bcsic_net/bib_bcsic_net.txt
+    image: ./assets/files/publications/bcsic_net/bcsic_net.png
+    post: ./assets/files/publications/bcsic_net/bcsic_post.url
 
   - title: "Disparity-Aware Reference Frame Generation Network for Multiview Video Coding"
-    authors: Jianjun Lei, Zongqian Zhang, Zhaoqing Pan*, Dong Liu,  Ying Chen, Nam Ling (*Corresponding author)
+    authors: Jianjun Lei, Zongqian Zhang, Zhaoqing Pan*, Dong Liu, <strong>Xiangrui Liu</strong>, Ying Chen, Nam Ling (*Corresponding author)
     conference_short: TIP
     conference: IEEE Transactions on Image Processing <strong>(TIP)</strong>, 2022.
-    pdf: https://ieeexplore.ieee.org/abstract/document/9802838/authors#full-text-header
-    bibtex: ./assets/files/bib_dag_net.txt
-    image: ./assets/img/dag_net.jpg
+    url: https://ieeexplore.ieee.org/abstract/document/9802838/authors#full-text-header
+    bibtex: ./assets/files/publications/dag_net/bib_dag_net.txt
+    image: ./assets/files/publications/dag_net/dag_net.jpg
 
   - title: "Texture-Guided End-to-End Depth Map Compression"
     authors: Bo Peng, Yuying Jing, Dengchao Jin, <strong>Xiangrui Liu</strong>, Zhaoqing Pan, Jianjun Lei* (*Corresponding author)
     conference_short: ICIP
     conference: IEEE International Conference on Image Processing <strong>(ICIP)</strong>, 2022.
-    pdf: https://ieeexplore.ieee.org/abstract/document/9897569
-    bibtex: ./assets/files/bib_tdmc_net.txt
-    image: ./assets/img/tdmc_net.png
+    url: https://ieeexplore.ieee.org/abstract/document/9897569
+    bibtex: ./assets/files/publications/tdmc_net/bib_tdmc_net.txt
+    image: ./assets/files/publications/tdmc_net/tdmc_net.png

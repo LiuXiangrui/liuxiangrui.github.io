@@ -1,0 +1,9 @@
+@article{lei2022disparity,
+  title={Disparity-aware reference frame generation network for multiview video coding},
+  author={Lei, Jianjun and Zhang, Zongqian and Pan, Zhaoqing and Liu, Dong and Liu, Xiangrui and Chen, Ying and Ling, Nam},
+  journal={IEEE Transactions on Image Processing},
+  volume={31},
+  pages={4515--4526},
+  year={2022},
+  publisher={IEEE}
+}

@@ -18,3 +18,5 @@ I am a Ph.D. candidate at City University of Hong Kong. My research interests in
 {% include_relative _includes/publications.md %}
 
 {% include_relative _includes/services.md %}
+
+{% include_relative _includes/posts.md %}

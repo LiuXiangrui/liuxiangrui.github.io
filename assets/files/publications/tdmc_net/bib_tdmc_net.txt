@@ -1,0 +1,8 @@
+@inproceedings{peng2022texture,
+  title={Texture-guided end-to-end depth map compression},
+  author={Peng, Bo and Jing, Yuying and Jin, Dengchao and Liu, Xiangrui and Pan, Zhaoqing and Lei, Jianjun},
+  booktitle={2022 IEEE International Conference on Image Processing (ICIP)},
+  pages={2386--2390},
+  year={2022},
+  organization={IEEE}
+}

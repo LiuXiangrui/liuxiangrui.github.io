@@ -1,18 +1,10 @@
 main:
-  # - title: "Contact"
-  #   url: ./#contact 
-  #   right: true 
-
   - title: "Posts"
     url: ./#Posts
     right: true 
-    
+
   - title: "Publications"
     url: ./#publications
 
   - title: "Bio"
     url: ./#about-me
-
-
-
-
