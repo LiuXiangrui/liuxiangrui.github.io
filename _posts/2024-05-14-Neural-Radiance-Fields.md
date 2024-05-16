@@ -99,7 +99,7 @@ $$T(\boldsymbol{x}_n) \approx \exp{\sum_{k=1}^{n-1}\sigma_k\delta_k} = T_n.$$
 - Ignoring the background light item $$I(0)$$, we have the rendering equations used by NeRF:
 
 $$
-L(\boldsymbol{x}) \approx \sum_{n=1}^{N}\sigma_nC_n\int_{\boldsymbol{x}_{n}}^{\boldsymbol{x}_{n+1}}T(\boldsymbol{t})\text{d}\boldsymbol{t}= \sum_{n=1}^{N} C_nT_n(1-e^{-\sigma_n \delta_n}), \quad\text{with}\;T_n = \exp{\sum_{k=1}^{n-1}\sigma_k\delta_k}.
+L(\boldsymbol{x}) \approx \sum_{n=1}^{N}\left[\sigma_nC_n\int_{\boldsymbol{x}_{n}}^{\boldsymbol{x}_{n+1}}T(\boldsymbol{t})\text{d}\boldsymbol{t}\right]= \sum_{n=1}^{N} C_nT_n(1-e^{-\sigma_n \delta_n}), \quad\text{with}\;T_n = \exp{\sum_{k=1}^{n-1}\sigma_k\delta_k}.
 $$
 
 <!-- 
