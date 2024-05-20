@@ -15,12 +15,11 @@ canonical: https://liuxiangrui.github.io//
 google_scholar: https://scholar.google.com/citations?user=yLyiy2UAAAAJ/
 github_link: https://github.com/LiuXiangrui/
 orcid: https://orcid.org/0000-0002-3300-6287
-# cv_link: assets/files/curriculum_vitae.pdf
+linkedin: https://www.linkedin.com/in/xiangrui-liu-643250262/
 
 # Images (e.g., your profile picture and your website's favicon) 
-avatar: ./assets/img/avatar.jpg
-favicon: ./assets/img/monkey.png
-favicon_dark: ./assets/img/monkey.png
+avatar: /assets/img/avatar.jpg
+favicon: /assets/img/monkey.png
 
 # Footnote ("Powered by Jekyll and Minimal Light theme.")
 enable_footnote: true
@@ -30,10 +29,6 @@ auto_dark_mode: false
 
 # Font
 font: "Serif"
-
-# Use this project as a remote theme for GitHub Pages
-# See the guide here: https://docs.github.com/en/pages/setting-up-a-github-pages-site-with-jekyll/adding-a-theme-to-your-github-pages-site-using-jekyll
-# remote_theme: yaoyao-liu/minimal-light
 
 # The following files will be removed from the generated website.
 exclude:

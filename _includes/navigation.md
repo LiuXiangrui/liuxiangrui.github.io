@@ -1,8 +1,3 @@
-{% for link in site.data.navigation.main %}
-  {% if link.right %}
-    <a class="normal right" href="{{ site.url }}/{{ link.url }}">{{ link.title }}</a>
-    {% else %}
-    <a class="normal" href="{{ site.url }}/{{ link.url }}">{{ link.title }}</a>
-  {% endif %}
-{% endfor %}
-
+<a class="nav-item-last", href="{{ site.url }}/#posts">{{ "Posts" }}</a>
+<a class="nav-item", href="{{ site.url }}/#publications">{{ "Publications" }}</a>
+<a class="nav-item", href="{{ site.url }}/#about-me">{{ "Bio" }}</a>

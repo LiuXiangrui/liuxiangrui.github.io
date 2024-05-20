@@ -1,44 +1,7 @@
 ---
 layout: post
-title:  "Neural Radiance Fields"
+title: "Neural Radiance Fields"
 excerpt_separator: ""
----
-
-<!-- # Background
-
-## Signal sampling therom
-
-- Given a continuous signal $$x_a(t)$$ with frequency spectrum $$X_a(j\Omega)$$, the sampled signal by ratio $$f_s=1/T$$ is discrete:
-
-$$\hat{x}_a(t)=\sum_{n=-\infty}^{\infty}x_a(t)\delta(t-nT),\quad \hat{X}_a(j\Omega)=\frac{1}{T}\sum_{n=-\infty}^{\infty}X_a(j\Omega-jn\frac{2\pi}{T}).$$
-
-- To avoid aliasing caused by sampling, a low-pass filter $$g(t)$$ with band $$[-\frac{\Omega_s}{2},\pi \frac{\Omega_s}{2}]$$ is applied to $$\hat{x}_a(t)$$:
-
-$$g(t)=\frac{\sin(\frac{\Omega_s}{2}t)}{\frac{\Omega_s}{2}t}=\text{Sa}(\frac{\Omega_s}{2}t),\quad G(j\Omega)=\left\{\begin{matrix}
-T_s,&|\Omega|\leq \frac{\Omega_s}{2}\\
-0,&|\Omega|> \frac{\Omega_s}{2}
-\end{matrix}\right.$$
-
-- The filtered output is
-
-$$\begin{aligned}y(t)&=\hat{x}_a(t)\ast g(t)=\sum_{n=-\infty}^{\infty}x_a(nT)g(t-nT)=\sum_{n=-\infty}^{\infty}x_a(nT)\frac{\sin(\frac{\pi}{T}t-n\pi)}{\frac{\pi}{T}t-n\pi}\\&=\sum_{n=-\infty}^{\infty}x_a(nT)\text{Sa}(\frac{\pi}{T}t-n\pi).\end{aligned}$$
-
-## 3D objects from the perspective of sampling
-- Rendering can be decomposed into (a) irregular sampling in the 3D space and (b) 2D projection of the sampled signals.
-- The irregular sampling at location $$\boldsymbol{u}\in\mathbb{R}^3$$ can be represented by weighted sum of reconstruction kernel $$r_k(\cdot)$$ on the integer set $$\mathbb{IN}$$:
-
-$$f_c(\boldsymbol{u})=\sum_{k\in\mathbb{IN}}w_kr_k(\boldsymbol{u}),$$
-
-- Projection operator $$\mathcal{P}$$ is further applied to $$f_c(\boldsymbol{u})$$, yielding 2D signals $$g_c(\boldsymbol{x})$$ at location $$\boldsymbol{x}\in\mathbb{R}^2$$:
-
-$$g_c(\boldsymbol{x})=\{\mathcal{P}(f_c)\}(\boldsymbol{x})=\sum_{k\in\mathbb{IN}}w_k\mathcal{P}(r_k(\boldsymbol{u}))=\sum_{k\in\mathbb{IN}}w_kp_k(\boldsymbol{u}).$$
-
-- Band-limit filter $$h(\boldsymbol{x})$$ is used to filter$$g_c(\boldsymbol{x})$$:
-
-$$\hat{g}_c(\boldsymbol{x})=g_c(\boldsymbol{x})\ast h(\boldsymbol{x})=\sum_{k\in\mathbb{IN}}w_k\int_{\mathbb{R}}p_k(\boldsymbol{\eta})h(\boldsymbol{x}-\boldsymbol{\eta})\text{d}\boldsymbol{\eta}=\sum_{k\in\mathbb{IN}}w_k\left[(p_k\ast h)(\boldsymbol{x})\right]=\sum_{k\in\mathbb{IN}}w_k\rho_k(\boldsymbol{x}).$$
-
-- Operation to the sampled scene is equal to the operation of the reconstruction kernel $$\rho_k(\cdot)$$. -->
-
 ---
 
 ## Volume Rendering
@@ -102,38 +65,68 @@ $$
 L(\boldsymbol{x}) \approx \sum_{n=1}^{N}\left[\sigma_nC_n\int_{\boldsymbol{x}_{n}}^{\boldsymbol{x}_{n+1}}T(\boldsymbol{t})\text{d}\boldsymbol{t}\right]= \sum_{n=1}^{N} C_nT_n(1-e^{-\sigma_n \delta_n}), \quad\text{with}\;T_n = \exp{\sum_{k=1}^{n-1}\sigma_k\delta_k}.
 $$
 
-<!-- 
-### Beer-Lamber Law
-- The transmittance is defined as the fraction of light that is transmitted through the volume:
 
-$$T(\boldsymbol{x}_0, \boldsymbol{x_0}+\omega d)=\frac{T_{out}}{T_{in}} = \exp\left(-\int_{z=0}^{d}\sigma_a(\boldsymbol{x}_0+\omega z)\text{d}z\right).$$
+## Camera Pose and Transform
 
-- If we only consider absortion, the radiative transfer equation can be formulated as
+### World Coordinate System
 
-$$L(\boldsymbol{x}_0 + \omega d, \omega)=T(\boldsymbol{x}_0, \boldsymbol{x_0}+\omega d) L(\boldsymbol{x}_0, \omega)$$
+|  Name   | x-axis | y-axis | z-axis |    Example    |
+|:-------:|:------:|:------:|:------:|:-------------:|
+|Cartesian|(1,0,0) |(0,1,0) |(0,0,1) |       -       |
+|   RDF   |(0,1,0) |(0,0,-1)|(-1,0,0)| OpenCV, Colmap|
+|   DRB   |(0,0,-1)|(0,1,0) |(1,0,0) |      LLFF     |
+|   RUB   |(0,1,0) |(0,0,1) |(1,0,0) | OpenGL, NeRF  |
+|   LUF   |(0,-1,0)|(0,0,1) |(-1,0,0)|   Pytorch3D   |
 
-- If we consider emission and absortion, the radiative transfer equation can be formulated as
 
-$$
-L(\boldsymbol{x}_0 + \omega d, \omega)=T(\boldsymbol{x}_0, \boldsymbol{x_0}+\omega d) L(\boldsymbol{x}_0, \omega) + \int_{z=0}^{d}T(\boldsymbol{x}_0, \boldsymbol{x_0}+\omega z)\sigma_a(\boldsymbol{x_0}+\omega z)L_e(\boldsymbol{x_0}+\omega z, \omega)\text{d}z
-$$
+### Extrinsic Matrix
 
-- If the medium is homogenous emitting, $$\sigma_a(\boldsymbol{x})\equiv\sigma$$ and $$L_e(\boldsymbol{x_0}+\omega z, \omega)\equiv L_e(\boldsymbol{x_0}, \omega)$$. Hence, we have $$T(\boldsymbol{x}_0, \boldsymbol{x_0}+\omega d)=\exp\left(-d\sigma\right)$$ and
-
-$$
-\begin{aligned}
-L(\boldsymbol{x}_0 + \omega d, \omega)&W=T(\boldsymbol{x}_0, \boldsymbol{x_0}+\omega d) L(\boldsymbol{x}_0, \omega) + \int_{z=0}^{d}T(\boldsymbol{x}_0, \boldsymbol{x_0}+\omega z)\sigma_a(\boldsymbol{x_0}+\omega z)L_e(\boldsymbol{x_0}+\omega z, \omega)\text{d}z\\
-&=\exp\left(-d\sigma\right)L(\boldsymbol{x}_0, \omega) + \sigma L_e(\boldsymbol{x_0}, \omega)\int_{z=0}^{d}\exp\left(-z\sigma\right)\text{d}z\\
-&=\exp\left(-d\sigma\right)L(\boldsymbol{x}_0, \omega) + \sigma L_e(\boldsymbol{x_0}, \omega)\left(1-\exp\left(-d\sigma\right)\right)
-\end{aligned}
-$$
-
-### Ray Matching
-- The change of raidance when going through a volume from $$\boldsymbol{x}_0$$ to $$\boldsymbol{x}_1$$ can be formulated as
+- Camera extrinsic matrix, aka world-to-camera matrix (w2c), is used to transform a point $$\boldsymbol{p}_w = [x_w,y_w,z_w]^T$$ from world coordinate system to camera coordinate system.
 
 $$
-L(x, \omega) = \int_{\boldsymbol{x}_0}^{\boldsymbol{x}}T(t, x_0)L(x_0, \omega)=\sum
+\begin{bmatrix}
+x_c \\ y_c \\ z_c \\ 1
+\end{bmatrix}=\begin{bmatrix}
+\boldsymbol{R} & \boldsymbol{t}\\
+\boldsymbol{0} &1
+\end{bmatrix}\begin{bmatrix}
+x_w \\ y_w \\ z_w \\1
+\end{bmatrix}
 $$
 
+- Translation vector $$\boldsymbol{t}\in\mathbb{R}^3$$ represents the position of the world coordinate origin in the camera coordinate system.
+- Rotation matrix $$\boldsymbol{R}\in\mathbb{R}^{3\times 3}$$ represents the rotation from the world coordinate system to the camera coordinate system.
 
-$$\int_{\boldsymbol{x}_0}^{\boldsymbol{x}_1}L(\boldsymbol{x}, \omega)\text{d}\boldsymbol{x}=\sum_{i=1}^{N}L(x_{i-1}+wd_i,\omega)$$ -->
+$$
+\boldsymbol{R} = \boldsymbol{R}_x \boldsymbol{R}_y \boldsymbol{R}_z,\quad \text{where}\;
+\boldsymbol{R}_x = \begin{bmatrix}1 & 0 & 0\\0 & \cos\alpha & -\sin\alpha\\0 & \sin\alpha & \cos\alpha\end{bmatrix},\quad
+\boldsymbol{R}_y = \begin{bmatrix}\cos\beta & 0 & \sin\beta\\0 & 1 & 0\\-\sin\beta & 0 & \cos\beta\end{bmatrix},\quad
+\boldsymbol{R}_z = \begin{bmatrix}\cos\gamma & -\sin\gamma & 0\\\sin\gamma & \cos\gamma & 0\\0 & 0 & 1\end{bmatrix},\quad
+$$
+
+### Intrinsic Matrix
+- The intrinsic matrix $$\boldsymbol{K}\in\mathbb{R}^3$$ describes the transform from camera coordinate system to 2D imaging plane, including focal length $$f_x, f_y$$ and offsets of the image origin relative to the camera optical center $$c_x,c_y$$.
+
+$$
+z_c\begin{bmatrix}
+        u\\ v \\1
+    \end{bmatrix}=\begin{bmatrix}
+ f_x&0&c_x\\ 
+ 0&f_y&c_y\\ 
+ 0&0&1
+\end{bmatrix}\begin{bmatrix}
+x_c \\ y_c \\ z_c\end{bmatrix}
+$$
+
+- Note that we need to know the depth $$z_c$$ if we want to re-map pixels $$(u,v)$$ to the camera coordinate system. That's why we need depth estimation. 
+
+> [Kyle Simek](https://ksimek.github.io/2012/08/22/extrinsic/) provide a useful visualization of camera pose.
+
+### Perspective Transform
+- Only objects within viewing frustum can be projected into 2D imaging plane.
+- The viewing frustum is determined by nera clipping plane (2D imaging plane) and far clipping plane (infinity), including the depth $$\{z_{near}, z_{far}\}$$ and right-top corner of the 2D imaging plane $$(r, t)$$
+- Perspective matrix describes the transform a 3D point within viewing frustum to the normalized device coordinates (NDC).
+
+$$
+\boldsymbol{p}_{p}=\begin{bmatrix}\frac{z_{nera}}{r} & 0 & 0 & 0 \\0 & \frac{z_{nera}}{t} & 0 & 0 \\0 & 0 & -\frac{z_{far}+z_{nera}}{z_{far}-z_{nera}} & -\frac{2z_{far}z_{near}}{z_{far}-z_{near}}\\0 & 0 & -1 & 0\end{bmatrix}
+$$

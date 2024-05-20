@@ -1,21 +1,20 @@
-<h2 id="posts" style="margin: 2px 0px 0px;">Posts</h2>
+<h2 id="posts" style="margin: 2px 0px 10px;">Posts</h2>
 
-<div class="posts">
+<style>
+.post-title a {
+    color: #39c;
+    font-weight: bolder; 
+}
+</style>
+
 <ol class="post_content">
-
-
-<!-- Print the contents of the link object -->
-{% for post in site.posts %}
-<li>
-<div class="pub-row">
-  <div class="col-sm-9" style="position: relative;padding-right: 15px;padding-left: 20px;">
-      <div class="title"><a href="{{ post.url }}">{{ post.title }}</a></div>
+  {% for post in site.posts %}
+  <li>
+  <div class="pub-row">
+    <div class="col-sm-9" style="position: relative; padding-right: 15px; padding-left: 20px; padding-bottom: 10px;">
+      <div class="post-title"><a href="{{ post.url }}">{{ post.title }}</a></div>
   </div>
-</div>
-</li>
-{% endfor %}
-
-<br>
-
+  </li>
+  {% endfor %}
+  <br>
 </ol>
-</div>
