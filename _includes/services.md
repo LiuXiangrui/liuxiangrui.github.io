@@ -12,6 +12,7 @@
   <li><a href="https://ieeexplore.ieee.org/xpl/RecentIssue.jsp?punumber=83"><autocolor>IEEE Transactions on Image Processing</autocolor></a></li>
   <li><a href="https://ieeexplore.ieee.org/xpl/RecentIssue.jsp?punumber=6221036"><autocolor>IEEE Transactions on Cybernetics</autocolor></a></li>
   <li><a href="https://ieeexplore.ieee.org/xpl/RecentIssue.jsp?punumber=6046"><autocolor>IEEE Transactions on Multimedia</autocolor></a></li>
+  <li><a href="https://ieeexplore.ieee.org/xpl/RecentIssue.jsp?punumber=76"><autocolor>IEEE Transactions on Circuits and Systems for Video Technology</autocolor></a></li>
   <li><a href="https://www.sciencedirect.com/journal/neurocomputing"><autocolor>Neurocomputing</autocolor></a></li>
   <li><a href="https://www.nowpublishers.com/SIP"><autocolor>APSIPA Transactions on Signal and Information Processing</autocolor></a></li>
 </ul>
