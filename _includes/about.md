@@ -14,5 +14,6 @@
 <h2 id="news">News</h2>
 
 <ul>
+  <li><strong>[Jul. 2024]</strong> Our paper about 3DGS compression is accepted to ACM MM 2024.</li>
   <li><strong>[Mar. 2024]</strong> Our paper about lossless medical image compression is accepted to IEEE Transcription on Image Processing.</li>
 </ul>
