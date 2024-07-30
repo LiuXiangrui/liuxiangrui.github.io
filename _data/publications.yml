@@ -14,7 +14,6 @@ main:
     conference: IEEE Transactions on Image Processing <strong>(TIP)</strong>, 2024.
     url: https://ieeexplore.ieee.org/abstract/document/10478821
     code: https://github.com/LiuXiangrui/BCM-Net
-    # page: https://class-il.mpi-inf.mpg.de/mnemonics/
     bibtex: ./assets/files/publications/bcm_net/bib_bcm_net.txt
     image: ./assets/files/publications/bcm_net/bcm_net.png
 
@@ -25,7 +24,7 @@ main:
     url: https://openaccess.thecvf.com/content/CVPR2022/html/Lei_Deep_Stereo_Image_Compression_via_Bi-Directional_Coding_CVPR_2022_paper.html
     bibtex: ./assets/files/publications/bcsic_net/bib_bcsic_net.txt
     image: ./assets/files/publications/bcsic_net/bcsic_net.png
-    post: ./assets/files/publications/bcsic_net/bcsic_post.url
+    post: ./assets/files/publications/bcsic_net/bcsic_post.pdf
 
   - title: "Disparity-Aware Reference Frame Generation Network for Multiview Video Coding"
     authors: Jianjun Lei, Zongqian Zhang, Zhaoqing Pan*, Dong Liu, <strong>Xiangrui Liu</strong>, Ying Chen, Nam Ling (*Corresponding author)
