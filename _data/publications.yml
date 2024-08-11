@@ -7,6 +7,7 @@ main:
     code: https://github.com/LiuXiangrui/CompGS
     bibtex: ./assets/files/publications/comp_gs/bib_comp_gs.txt
     image: ./assets/files/publications/comp_gs/comp_gs.jpg
+    suppl: https://github.com/LiuXiangrui/CompGS/blob/main/assets/Suppl.pdf
 
   - title: "Bilateral Context Modeling for Residual Coding in Lossless 3D Medical Image Compression"
     authors: <strong>Xiangrui Liu</strong>, Meng Wang, Shiqi Wang*, Sam Kwong* (*Corresponding authors)
