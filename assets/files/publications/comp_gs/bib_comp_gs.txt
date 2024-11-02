@@ -2,5 +2,6 @@
   title={CompGS: Efficient 3D Scene Representation via Compressed Gaussian Splatting},
   author={Liu, Xiangrui and Wu, Xinju and Zhang, Pingping and Wang, Shiqi and Li, Zhu and Kwong, Sam},
   booktitle={Proceedings of the 32nd ACM International Conference on Multimedia},
+  pages = {2936–2944},
   year={2024}
 }

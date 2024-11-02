@@ -3,11 +3,19 @@ main:
     authors: <strong>Xiangrui Liu†</strong>, Xinju Wu†, Pingping Zhang, Shiqi Wang*, Zhu Li, Sam Kwong (†Equal contribution, *Corresponding author)
     conference_short: ACM MM
     conference: ACM Multimedia (ACM MM), 2024.
-    url: https://arxiv.org/abs/2404.09458
+    url: https://dl.acm.org/doi/10.1145/3664647.3681468
     code: https://github.com/LiuXiangrui/CompGS
     bibtex: ./assets/files/publications/comp_gs/bib_comp_gs.txt
     image: ./assets/files/publications/comp_gs/comp_gs.jpg
     suppl: https://github.com/LiuXiangrui/CompGS/blob/main/assets/Suppl.pdf
+    post: ./assets/files/publications/comp_gs/comp_gs_post.pdf
+
+  - title: "2D Gaussian Splatting for Image Compression"
+    authors: Pingping Zhang, <strong>Xiangrui Liu</strong>, Meng Wang, Shiqi Wang*, Sam Kwong* (*Corresponding authors)
+    conference: APSIPA Transactions on Signal and Information Processing, 2022.
+    url: https://www.nowpublishers.com/article/Details/SIP-20240025
+    bibtex: ./assets/files/publications/2dgs/bib_2dgs.txt
+    image: ./assets/files/publications/2dgs/2dgs.jpg
 
   - title: "Bilateral Context Modeling for Residual Coding in Lossless 3D Medical Image Compression"
     authors: <strong>Xiangrui Liu</strong>, Meng Wang, Shiqi Wang*, Sam Kwong* (*Corresponding authors)

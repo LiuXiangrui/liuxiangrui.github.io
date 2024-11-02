@@ -1,0 +1,8 @@
+@article{zhang20242d,
+  title={2D Gaussian Splatting for Image Compression},
+  author={Zhang, Pingping and Liu, Xiangrui and Wang, Meng and Wang, Shiqi and Kwong, Sam},
+  journal={APSIPA Transactions on Signal and Information Processing},
+  volume={13},
+  number={6},
+  year={2024}
+}
