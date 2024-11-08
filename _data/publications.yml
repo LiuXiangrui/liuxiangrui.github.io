@@ -12,10 +12,10 @@ main:
 
   - title: "2D Gaussian Splatting for Image Compression"
     authors: Pingping Zhang, <strong>Xiangrui Liu</strong>, Meng Wang, Shiqi Wang*, Sam Kwong* (*Corresponding authors)
-    conference: APSIPA Transactions on Signal and Information Processing, 2022.
+    conference: APSIPA Transactions on Signal and Information Processing, 2024.
     url: https://www.nowpublishers.com/article/Details/SIP-20240025
     bibtex: ./assets/files/publications/2dgs/bib_2dgs.txt
-    image: ./assets/files/publications/2dgs/2dgs.jpg
+    image: ./assets/files/publications/2dgs/2dgs.png
 
   - title: "Bilateral Context Modeling for Residual Coding in Lossless 3D Medical Image Compression"
     authors: <strong>Xiangrui Liu</strong>, Meng Wang, Shiqi Wang*, Sam Kwong* (*Corresponding authors)
